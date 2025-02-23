@@ -44,8 +44,6 @@ def backup_photos(iduser_vk: str, token_yndx: str, album=False, number_photos=5)
 
 
 if __name__ == '__main__':
-    # id = '231350322'
-    id = '134218378'
-    id = '252861379'
-    backup_photos(id, TOKEN_YNDX, number_photos=5)
-    backup_photos(id, TOKEN_YNDX, album=True, number_photos=5)
+    id = ''
+    backup_photos(id, TOKEN_YNDX, number_photos=10)
+    backup_photos(id, TOKEN_YNDX, album=True, number_photos=10)

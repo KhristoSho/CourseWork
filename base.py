@@ -124,7 +124,7 @@ class YNDXdisk:
             return False
 
 if __name__ == '__main__':
-    user_VK = VKphotos('231350322', TOKEN_VK) # Создаем экземпляр класса VKphotos
+    user_VK = VKphotos('########', TOKEN_VK) # Создаем экземпляр класса VKphotos
     photos = user_VK.get_photos() # Получаем словарь: key="Название альбома", value="список словарей с параметрами к фото"
     user_YNDX = YNDXdisk(TOKEN_YNDX) # Создаем экзепляр класса YNDXdisk
     user_YNDX.check_or_made_folder('backup_photos') # создаем папку для резервного копирования backup_photo
@@ -135,7 +135,7 @@ if __name__ == '__main__':
             response = requests.get(photo['url'])
             user_YNDX.upload_photos(name_folder=name_folder, name_photos=photo['name_photo'], file_photo=response.content) # загружаем фото на яндекс диск
 
-    user_VK = VKphotos('134218378', TOKEN_VK)
+    user_VK = VKphotos('########', TOKEN_VK)
     alb = user_VK.get_albums()
     photos = user_VK.get_photos(alb)
     pprint(photos)
